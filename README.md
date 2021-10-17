@@ -1,10 +1,5 @@
 # E-Commerce-Website-Using-Python
 
-## Get In Touch
-Have any problem? Don't hesitate to connect... <br>
-(i) Facebook: https://www.facebook.com/mohsingram <br>
-(ii) Youtube: https://www.youtube.com/mohsingram <br>
-
 ## Web View
 Go to this link to view website <br>
 https://menshut.pythonanywhere.com
