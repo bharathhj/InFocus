@@ -72,8 +72,10 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `uid`, `ofname`, `pid`, `quantity`, `oplace`, `mobile`, `dstatus`, `odate`, `ddate`) VALUES
 (14, 17, 'Bharath H J', 9, 1, 'Hassan', '6362780000', 'no', '2021-10-15 12:51:19', '2021-10-22'),
 (17, 17, 'Manvith J Y', 19, 1, 'Shivamogga', '9876543210', 'no', '2021-10-16 00:51:13', '2021-10-23'),
-(18, 17, 'Abhi', 9, 1, 'Mysore', '9449089760', 'no', '2021-10-16 04:29:08', '2021-10-23');
 
+
+(20, 17, 'Jason', 9, 1, 'Manglore', '8999990001', 'no', '2021-08-17 05:30:08', '2021-10-15');
+(21, 17, 'Sampan', 9, 1, 'Kundapur', '8999990002', 'no', '2021-08-11 01:30:08', '2021-10-11');
 
 
 
