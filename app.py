@@ -1,9 +1,12 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, request,logging
-from flask_mysqldb import MySQL
+#from flask_pymysqldb import MySQL
+from flask_mysqldb import MySQL    # ✅ Correct
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators, SelectField
 from passlib.hash import sha256_crypt
 from functools import wraps
+#from flask_reuploaded import UploadSet, configure_uploads, IMAGES
 from flask_uploads import UploadSet, configure_uploads, IMAGES
+#from flask_uploads import UploadSet, configure_uploads, IMAGES
 import timeit
 import datetime
 from flask_mail import Mail, Message
