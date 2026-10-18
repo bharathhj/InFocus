@@ -12,6 +12,7 @@ import datetime
 from flask_mail import Mail, Message
 import os
 from wtforms.fields import EmailField
+import MySQLdb.cursors
 
 #from wtforms.fields.html5 import EmailField
 
