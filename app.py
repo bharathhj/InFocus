@@ -24,6 +24,7 @@ configure_uploads(app, photos)
               
               
 # Config MySQL
+mysql = MySQL()
 app.config['MYSQL_HOST'] = 'gateway01.ap-norteast-1.prod.aws.tidbcloud.com' # Replace with your TiDB host
 app.config['MYSQL_USER'] = 'TN3jnYfHSAisqVh.root'
 app.config['MYSQL_PASSWORD'] = 'Kzk9NhNTnkrMR5KC'
