@@ -19,13 +19,25 @@ app.config['UPLOADED_PHOTOS_DEST'] = 'static/image/product'
 photos = UploadSet('photos', IMAGES)
 configure_uploads(app, photos)
 
+              
+              
 # Config MySQL
-mysql = MySQL()
-app.config['MYSQL_HOST'] = '127.0.0.1'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'InFocus'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['MYSQL_HOST'] = 'gateway01.ap-norteast-1.prod.aws.tidbcloud.com' # Replace with your TiDB host
+app.config['MYSQL_USER'] = 'TN3jnYfHSAisqVh.root'
+app.config['MYSQL_PASSWORD'] = 'Kzk9NhNTnkrMR5KC'
+app.config['MYSQL_DB'] = 'infocus'
+app.config['MYSQL_PORT'] = 4000
+
+# Required for TiDB Cloud SSL connection
+app.config['MYSQL_CUSTOM_OPTIONS'] = {'ssl': {'ca': '/etc/ssl/certs/ca-certificates.crt'}}
+
+# Config MySQL
+# mysql = MySQL()
+# app.config['MYSQL_HOST'] = '127.0.0.1'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_DB'] = 'InFocus'
+# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 # Initialize the app for use with this MySQL class
 mysql.init_app(app)

@@ -11,3 +11,4 @@ mysqlclient>=2.2.0
 passlib==1.7.1
 Werkzeug==0.15.2
 WTForms==2.2.1
+gunicorn==21.2.0
