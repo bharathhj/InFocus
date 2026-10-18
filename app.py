@@ -29,6 +29,7 @@ app.config['MYSQL_HOST'] = 'gateway01.ap-northeast-1.prod.aws.tidbcloud.com' # R
 app.config['MYSQL_USER'] = 'TN3jnYfHSAisqVh.root'
 app.config['MYSQL_PASSWORD'] = 'Kzk9NhNTnkrMR5KC'
 app.config['MYSQL_DB'] = 'infocus'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 app.config['MYSQL_PORT'] = 4000
 
 # Required for TiDB Cloud SSL connection
