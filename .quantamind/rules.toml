@@ -1,0 +1,25 @@
+# General Pull Request configuration
+[settings]
+fail_on_warning = false
+
+# Rule 1: Enforce SQL naming and style conventions
+[[rules]]
+name = "sql-standards"
+description = "Ensure SQL files follow standard conventions and include proper keys."
+paths = ["**/*.sql"]
+prompt = """
+Review all SQL changes for:
+1. SQL keywords (SELECT, INSERT, UPDATE, CREATE TABLE, etc.) should be in uppercase.
+2. Table definitions must specify a PRIMARY KEY.
+3. Foreign keys must explicitly state ON DELETE/UPDATE behavior or referential constraints.
+4. Avoid plain text storage of sensitive fields (e.g., passwords, secret keys).
+"""
+
+# Rule 2: Ensure documentation or migration hygiene
+[[rules]]
+name = "schema-documentation"
+description = "Verify that schema modifications are explained."
+paths = ["**/*.sql"]
+prompt = """
+Check that any new table or column added has an accompanying descriptive comment or is explained clearly in the PR description.
+"""
