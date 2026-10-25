@@ -1,0 +1,26 @@
+# rules.toml
+
+# Prevent raw database secrets from being committed
+[[rule]]
+name = "no-hardcoded-tidb-secrets"
+check = "hardcoded_secret"
+
+# Enforce safe database session management (e.g., forbidding direct raw cursor calls)
+[[rule]]
+name = "prevent-dangerous-raw-exec"
+check = "forbid_call"
+target = "cursor.execute_raw"
+paths = ["app/database/", "app/models/"]
+
+# Block development debugging tools in PRs to protect production on Render
+[[rule]]
+name = "forbid-debug-tools"
+check = "forbid_import"
+target = "pdb"
+
+# Require model review for sensitive checkout and payment handling
+[[rule]]
+name = "audit-checkout-logic"
+check = "model_judged"
+description = "Verify proper exception handling, idempotency, and transaction rollback during payment or order placement."
+paths = ["app/routers/checkout.py", "app/services/payment.py"]
